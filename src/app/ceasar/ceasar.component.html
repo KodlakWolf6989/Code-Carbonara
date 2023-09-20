@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <h1><strong>Text</strong></h1>
+  <hr>
+  <textarea id="plain" (keyup)="sifrovani()" class="plaintext"></textarea>
+</div>
+<div class="wrapper">
+  <h1><strong>Settings</strong></h1>
+  <hr>
+<input id="key" type="number" min="0" class="cislo" (click)="sifrovani()" value="0">
+</div>
+<div class="wrapper">
+  <h1><strong>Cipher text</strong></h1>
+  <hr>
+  <textarea id="output" class="ciphertext"></textarea>
+</div>

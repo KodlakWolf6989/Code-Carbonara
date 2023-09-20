@@ -1,0 +1,12 @@
+.pikaču{
+    color: rgb(0, 0, 0);
+    background-color: red;
+    width: 300px;
+    height: 300px;  
+}
+.větší{
+    color: blue;
+}
+.pikaču .větší{
+    color: white;
+}

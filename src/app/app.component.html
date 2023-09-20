@@ -1,0 +1,14 @@
+<div class="header"><span class="kadel">Project</span> Bootcamp</div>
+<div id="navbar" class="navbar closed" (click)="open()">
+  <div id="ul" class="notLoaded" *ngIf="opened">
+    <div class="container">
+      <a routerLink="caesar">Caesar</a>
+      <a routerLink="calculator">Calculator</a>
+      <a routerLink="gitapi">GitApi</a>
+      <a routerLink="game">CV</a>
+    </div>
+  </div>
+</div>
+<div class="wrapper">
+<router-outlet></router-outlet>
+</div>

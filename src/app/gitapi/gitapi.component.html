@@ -1,0 +1,28 @@
+<form class="form">
+    <p>{{ name.value }}</p>
+    <input type="text" id="search" name="search" [formControl]="name">
+</form>
+<div class="wrapper">
+    <ng-template #Spinner>
+        <app-spinner></app-spinner>
+        </ng-template>
+<div class="weatherBar" *ngIf="repositories | async as repos; else Spinner">
+    <div class="card" *ngFor="let repo of repos.items">
+        <div class ="header">
+            <img class="img" [src]="repo.owner.avatar_url" />
+            <a [href]="repo.html_url">{{repo.owner.login}}/{{repo.name}}</a>
+        </div>
+        <div class="card animate-slide-fade bg-white p-4 rounded shadow">
+            <div class="flex items-center">
+              <span class="h-3 w-3 mr-2 rounded-full bg-green-500"></span>
+        <div class="description">
+            {{repo.description ?? "no description :("}}
+        </div>
+        <br>
+    </div>
+    </div>
+</div>
+<mat-paginator (page)="pageEvent($event)" [length]="repos.total_count" [pageSizeOptions]="[10, 50, 100]" aria-label="Select page" #paginator>
+</mat-paginator>
+</div>
+
